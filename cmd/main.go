@@ -1,20 +1,24 @@
 package main
 
 import (
+	"golang-mvc/internal/controller"
 	"log"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
 )
 
+const port = ":8081"
+
 func main() {
 	router := chi.NewRouter()
-	log.Printf("Starting server on port 8081")
+	log.Printf("Starting server on port https://localhost%s", port)
 
-	router.Get("/contact/", GetContact)
-	router.Post("/contact", CreateContact)
-	router.Put("/contact/{id}", UpdateContact)
-	router.Delete("/contact/{id}", DeleteContact)
+	router.Get("/contact/", controller.GetContact)
+	router.Post("/contact", controller.CreateContact)
+	router.Put("/contact/{id}", controller.UpdateContact)
+	router.Delete("/contact/{id}", controller.DeleteContact)
 
-	log.Fatal(http.ListenAndServe(":8081", nil))
+	log.Fatal(http.ListenAndServe(port, router))
+
 }

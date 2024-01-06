@@ -4,7 +4,7 @@
 
 
 
-API para gerenciar users (CRUD) 
+API para gerenciar contatos (CRUD) 
 
 ## Tecnologias
 
@@ -15,7 +15,7 @@ API para gerenciar users (CRUD)
 - Clonar repositório git
 - Construir o projeto:
 ```
-./mvnw clean package
+
 ```
 
 A API poderá ser acessada em [localhost:8081](http://localhost:8081).
