@@ -8,12 +8,6 @@ API para gerenciar users (CRUD)
 
 ## Tecnologias
 
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [Spring Data](https://docs.spring.io/spring-framework/reference/data-access/r2dbc.html)
-- [Spring Dev Tools](https://docs.spring.io/spring-framework/)
-- [Spring Lombok](https://docs.spring.io/spring-framework/)
-- [H2 Database](https://docs.spring.io/spring-framework/)
-
 
 ## Como Executar
 
