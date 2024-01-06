@@ -1,7 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"log"
+	"net/http"
+
+	"github.com/go-chi/chi/v5"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	router := chi.NewRouter()
+	log.Printf("Starting server on port 8081")
+
+	router.Get("/contact/", GetContact)
+	router.Post("/contact", CreateContact)
+	router.Put("/contact/{id}", UpdateContact)
+	router.Delete("/contact/{id}", DeleteContact)
+
+	log.Fatal(http.ListenAndServe(":8081", nil))
 }
